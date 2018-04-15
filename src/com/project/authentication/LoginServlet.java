@@ -54,7 +54,6 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		ResultSet resultSet = sqlRepository.doLogin(username, password);
-		System.out.println(resultSet);
 		if (resultSet == null)
 			return;
 

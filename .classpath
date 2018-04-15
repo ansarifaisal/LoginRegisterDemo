@@ -15,5 +15,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/h2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/h2-1.4.192.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sqljdbc42.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sqljdbc41.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

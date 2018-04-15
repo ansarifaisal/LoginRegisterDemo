@@ -9,17 +9,25 @@ public class DBUtil {
 	// =======================================================
 	// -----------Connection Properties for H2 DB-------------
 	// =======================================================
-	private static final String DRIVER = "org.h2.Driver";
-	private static final String DBURL = "jdbc:h2:tcp://localhost/~/testing";
-	private static final String DBUSER = "sa";
-	private static final String DBPASSWORD = "sa";
+	// private static final String DRIVER = "org.h2.Driver";
+	// private static final String DBURL = "jdbc:h2:tcp://localhost/~/testing";
+	// private static final String DBUSER = "sa";
+	// private static final String DBPASSWORD = "sa";
 	// ========================================================
+
+	//=========================================================
+	//------------Connection Properties for SQL Sever----------
+	//=========================================================
+	private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private static final String DBURL = "jdbc:sqlserver://localhost\\SQLExpress;databaseName=RegisterLoginDB;integratedSecurity=true;";
 
 	public static Connection getConnection() {
 		Connection connection = null;
 		try {
 			Class.forName(DRIVER);
-			connection = DriverManager.getConnection(DBURL, DBUSER, DBPASSWORD);
+			connection = DriverManager.getConnection(DBURL);
+			// connection = DriverManager.getConnection(DBURL, DBUSER,
+			// DBPASSWORD);
 			if (connection != null)
 				System.out.println("Woohoo! Connection Established Successfully!");
 		} catch (ClassNotFoundException e) {
